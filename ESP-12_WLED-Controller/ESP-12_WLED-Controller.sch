@@ -302,17 +302,6 @@ Connection ~ 9175 2600
 Wire Wire Line
 	9175 2600 9175 2400
 $Comp
-L power:+5V #PWR013
-U 1 1 60CC786A
-P 2250 7275
-F 0 "#PWR013" H 2250 7125 50  0001 C CNN
-F 1 "+5V" V 2265 7403 50  0000 L CNN
-F 2 "" H 2250 7275 50  0001 C CNN
-F 3 "" H 2250 7275 50  0001 C CNN
-	1    2250 7275
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR014
 U 1 1 60CC9228
 P 2250 6075
@@ -330,44 +319,44 @@ GPIO4_5
 $Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 60CD0E2A
-P 3650 5050
-F 0 "J1" H 3622 4932 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 3622 5023 50  0000 R CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 3650 5050 50  0001 C CNN
-F 3 "~" H 3650 5050 50  0001 C CNN
-	1    3650 5050
+P 1325 3850
+F 0 "J1" H 1297 3732 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 1297 3823 50  0000 R CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 1325 3850 50  0001 C CNN
+F 3 "~" H 1325 3850 50  0001 C CNN
+	1    1325 3850
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:+5V #PWR03
 U 1 1 60CD1AA8
-P 3300 4700
-F 0 "#PWR03" H 3300 4550 50  0001 C CNN
-F 1 "+5V" V 3315 4828 50  0000 L CNN
-F 2 "" H 3300 4700 50  0001 C CNN
-F 3 "" H 3300 4700 50  0001 C CNN
-	1    3300 4700
+P 975 3500
+F 0 "#PWR03" H 975 3350 50  0001 C CNN
+F 1 "+5V" V 990 3628 50  0000 L CNN
+F 2 "" H 975 3500 50  0001 C CNN
+F 3 "" H 975 3500 50  0001 C CNN
+	1    975  3500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 4700 3300 4950
+	975  3500 975  3750
 Wire Wire Line
-	3300 4950 3450 4950
+	975  3750 1125 3750
 $Comp
 L power:GND #PWR04
 U 1 1 60CD3285
-P 3300 5400
-F 0 "#PWR04" H 3300 5150 50  0001 C CNN
-F 1 "GND" H 3305 5227 50  0000 C CNN
-F 2 "" H 3300 5400 50  0001 C CNN
-F 3 "" H 3300 5400 50  0001 C CNN
-	1    3300 5400
+P 975 4200
+F 0 "#PWR04" H 975 3950 50  0001 C CNN
+F 1 "GND" H 980 4027 50  0000 C CNN
+F 2 "" H 975 4200 50  0001 C CNN
+F 3 "" H 975 4200 50  0001 C CNN
+	1    975  4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 5400 3300 5050
+	975  4200 975  3850
 Wire Wire Line
-	3300 5050 3450 5050
+	975  3850 1125 3850
 $Comp
 L Connector:Conn_01x04_Male J2
 U 1 1 60CD4557
@@ -568,83 +557,6 @@ Wire Wire Line
 Wire Wire Line
 	2425 6500 2650 6500
 Connection ~ 7175 1700
-$Comp
-L Transistor_FET:2N7000 Q1
-U 1 1 60CC61B7
-P 9325 4450
-F 0 "Q1" H 9529 4496 50  0000 L CNN
-F 1 "2N7000" H 9529 4405 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 9525 4375 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 9325 4450 50  0001 L CNN
-	1    9325 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 60CC8C8B
-P 8800 4775
-F 0 "R7" H 8870 4821 50  0000 L CNN
-F 1 "10k" H 8870 4730 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8730 4775 50  0001 C CNN
-F 3 "~" H 8800 4775 50  0001 C CNN
-	1    8800 4775
-	1    0    0    -1  
-$EndComp
-Text GLabel 8400 5125 0    50   Input ~ 0
-GPIO4_3.3
-$Comp
-L power:+3.3V #PWR0101
-U 1 1 60CC977C
-P 8800 3675
-F 0 "#PWR0101" H 8800 3525 50  0001 C CNN
-F 1 "+3.3V" H 8815 3848 50  0000 C CNN
-F 2 "" H 8800 3675 50  0001 C CNN
-F 3 "" H 8800 3675 50  0001 C CNN
-	1    8800 3675
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 60CCB244
-P 9425 4025
-F 0 "R8" H 9495 4071 50  0000 L CNN
-F 1 "10k" H 9495 3980 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9355 4025 50  0001 C CNN
-F 3 "~" H 9425 4025 50  0001 C CNN
-	1    9425 4025
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0103
-U 1 1 60CD032E
-P 9425 3700
-F 0 "#PWR0103" H 9425 3550 50  0001 C CNN
-F 1 "+5V" H 9350 3900 50  0000 L CNN
-F 2 "" H 9425 3700 50  0001 C CNN
-F 3 "" H 9425 3700 50  0001 C CNN
-	1    9425 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9125 4450 8800 4450
-Wire Wire Line
-	8800 4450 8800 3675
-Wire Wire Line
-	8800 4450 8800 4625
-Connection ~ 8800 4450
-Wire Wire Line
-	8400 5125 8800 5125
-Wire Wire Line
-	8800 5125 8800 4925
-Wire Wire Line
-	8800 5125 9425 5125
-Wire Wire Line
-	9425 5125 9425 4650
-Connection ~ 8800 5125
-Wire Wire Line
-	9425 3700 9425 3875
-Text GLabel 10025 4225 2    50   Input ~ 0
-GPIO4_5
 Wire Notes Line
 	7925 1175 10425 1175
 Wire Notes Line
@@ -653,31 +565,8 @@ Wire Notes Line
 	10425 3000 7925 3000
 Wire Notes Line
 	7925 3000 7925 1175
-Wire Notes Line
-	7925 3350 10425 3350
-Wire Notes Line
-	10425 3350 10425 5250
-Wire Notes Line
-	10425 5250 7925 5250
-Wire Notes Line
-	7925 5250 7925 3350
-Wire Wire Line
-	9425 4175 9425 4225
-Wire Wire Line
-	9425 4225 10025 4225
-Connection ~ 9425 4225
-Wire Wire Line
-	9425 4225 9425 4250
 Text Notes 10400 2975 2    50   ~ 0
 Levelshifter\nOption1
-Text Notes 10400 5225 2    50   ~ 0
-Levelshifter\nOption2\n
-Text Label 9425 4725 0    50   ~ 0
-S
-Text Label 9075 4450 0    50   ~ 0
-G
-Text Label 9425 4300 0    50   ~ 0
-D
 Wire Wire Line
 	1275 1200 2025 1200
 Connection ~ 2025 1200
@@ -702,4 +591,89 @@ F 3 "" H 3125 975 50  0001 C CNN
 	1    3125 975 
 	1    0    0    -1  
 $EndComp
+$Comp
+L Transistor_BJT:BC847 Q1
+U 1 1 60D13373
+P 8875 5125
+F 0 "Q1" H 9066 5171 50  0000 L CNN
+F 1 "BC847" H 9066 5080 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9075 5050 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 8875 5125 50  0001 L CNN
+	1    8875 5125
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 60D14566
+P 8975 4500
+F 0 "R7" H 9045 4546 50  0000 L CNN
+F 1 "10k" H 9045 4455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8905 4500 50  0001 C CNN
+F 3 "~" H 8975 4500 50  0001 C CNN
+	1    8975 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60D151C8
+P 8975 5475
+F 0 "#PWR0101" H 8975 5225 50  0001 C CNN
+F 1 "GND" H 8980 5302 50  0000 C CNN
+F 2 "" H 8975 5475 50  0001 C CNN
+F 3 "" H 8975 5475 50  0001 C CNN
+	1    8975 5475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8975 4825 9350 4825
+Connection ~ 8975 4825
+Wire Wire Line
+	8975 5475 8975 5325
+$Comp
+L power:+5V #PWR0103
+U 1 1 60D1C6F6
+P 8500 4100
+F 0 "#PWR0103" H 8500 3950 50  0001 C CNN
+F 1 "+5V" V 8515 4228 50  0000 L CNN
+F 2 "" H 8500 4100 50  0001 C CNN
+F 3 "" H 8500 4100 50  0001 C CNN
+	1    8500 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8500 4100 8975 4100
+Wire Wire Line
+	8975 4350 8975 4100
+Connection ~ 8975 4100
+Wire Wire Line
+	8975 4100 9650 4100
+Wire Wire Line
+	8975 4825 8975 4925
+Wire Wire Line
+	8975 4650 8975 4825
+Wire Wire Line
+	9650 5025 9650 5475
+$Comp
+L Transistor_FET:IRF7404 Q2
+U 1 1 60D66B04
+P 9550 4825
+F 0 "Q2" H 9755 4871 50  0000 L CNN
+F 1 "IRF7404" H 9755 4780 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9750 4750 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/irf7404.pdf?fileId=5546d462533600a4015355fa2b5b1b9e" V 9550 4825 50  0001 L CNN
+	1    9550 4825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 4100 9650 4625
+Text GLabel 9850 5475 2    50   Input ~ 0
+WS-Strip
+Wire Wire Line
+	9850 5475 9650 5475
+Text GLabel 2250 7275 0    50   Input ~ 0
+WS-Strip
+Text Label 8300 5125 0    50   ~ 0
+GPIO2
+Wire Wire Line
+	8300 5125 8675 5125
 $EndSCHEMATC
