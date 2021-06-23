@@ -13,7 +13,7 @@ Praktischerweise bietet WLED hier die Möglichkeit über einen frei definierten 
 Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber, um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am GPIO12 des ESP2866 durchschaltet.  
 
 Die Platine verwendet folgendes Pin-Setting.
-Auf GPIO0 kann ein externer Button verwendet werden, gleichzeitung initiert man darüber den Flashvorgang.
+Auf GPIO0 kann ein externer Button verwendet werden zum Ein- und Ausschalten. Zusätzlich initiert man darüber den Flashvorgang.
 
 ![Pin-setting](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Pin-setting.jpg)
 
