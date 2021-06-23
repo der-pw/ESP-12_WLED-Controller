@@ -249,49 +249,8 @@ Wire Wire Line
 	6275 2100 5925 2100
 Wire Wire Line
 	2275 5675 2400 5675
-Text GLabel 1625 5775 0    50   Input ~ 0
+Text GLabel 1725 5700 0    50   Input ~ 0
 GPIO4_5
-$Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 60CD0E2A
-P 3400 4125
-F 0 "J1" H 3372 4007 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 3372 4098 50  0000 R CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 3400 4125 50  0001 C CNN
-F 3 "~" H 3400 4125 50  0001 C CNN
-	1    3400 4125
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR03
-U 1 1 60CD1AA8
-P 3050 3775
-F 0 "#PWR03" H 3050 3625 50  0001 C CNN
-F 1 "+5V" V 3065 3903 50  0000 L CNN
-F 2 "" H 3050 3775 50  0001 C CNN
-F 3 "" H 3050 3775 50  0001 C CNN
-	1    3050 3775
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3050 3775 3050 4025
-Wire Wire Line
-	3050 4025 3200 4025
-$Comp
-L power:GND #PWR04
-U 1 1 60CD3285
-P 3050 4475
-F 0 "#PWR04" H 3050 4225 50  0001 C CNN
-F 1 "GND" H 3055 4302 50  0000 C CNN
-F 2 "" H 3050 4475 50  0001 C CNN
-F 3 "" H 3050 4475 50  0001 C CNN
-	1    3050 4475
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3050 4475 3050 4125
-Wire Wire Line
-	3050 4125 3200 4125
 $Comp
 L Connector:Conn_01x04_Male J2
 U 1 1 60CD4557
@@ -413,19 +372,6 @@ F 3 "" H 3400 6725 50  0001 C CNN
 	1    3400 6725
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x03_Male J3
-U 1 1 60CC58BC
-P 2600 5775
-F 0 "J3" H 2572 5707 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 2572 5798 50  0000 R CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal" H 2600 5775 50  0001 C CNN
-F 3 "~" H 2600 5775 50  0001 C CNN
-	1    2600 5775
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2275 5875 2400 5875
 Wire Wire Line
 	2275 5350 2275 5675
 Wire Wire Line
@@ -434,8 +380,6 @@ Wire Wire Line
 	2975 6275 3400 6275
 Wire Wire Line
 	2275 6275 2675 6275
-Wire Wire Line
-	2275 5875 2275 6275
 Connection ~ 2275 6275
 $Comp
 L Device:Jumper JP1
@@ -462,16 +406,16 @@ $EndComp
 $Comp
 L Device:R R6
 U 1 1 60CE7305
-P 2000 5775
-F 0 "R6" V 1900 5725 50  0000 L CNN
-F 1 "330R" V 2100 5675 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1930 5775 50  0001 C CNN
-F 3 "~" H 2000 5775 50  0001 C CNN
-	1    2000 5775
+P 2000 5700
+F 0 "R6" V 1900 5650 50  0000 L CNN
+F 1 "330R" V 2100 5600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1930 5700 50  0001 C CNN
+F 3 "~" H 2000 5700 50  0001 C CNN
+	1    2000 5700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1625 5775 1850 5775
+	1725 5700 1850 5700
 Connection ~ 6725 1700
 Wire Wire Line
 	950  1200 1125 1200
@@ -549,8 +493,6 @@ F 3 "http://www.infineon.com/dgdl/irf7404.pdf?fileId=5546d462533600a4015355fa2b5
 	1    9275 3850
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	2150 5775 2400 5775
 $Comp
 L Device:D D1
 U 1 1 60D1AEEC
@@ -753,4 +695,48 @@ Wire Wire Line
 Connection ~ 9850 4500
 Wire Wire Line
 	9850 4500 9950 4500
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 60D306B0
+P 2600 5875
+F 0 "J1" H 2572 5757 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 2572 5848 50  0000 R CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal" H 2600 5875 50  0001 C CNN
+F 3 "~" H 2600 5875 50  0001 C CNN
+	1    2600 5875
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 5975 2275 5975
+Wire Wire Line
+	2275 5975 2275 6275
+Wire Wire Line
+	2150 5700 2250 5700
+Wire Wire Line
+	2250 5700 2250 5775
+Wire Wire Line
+	2250 5775 2400 5775
+$Comp
+L power:+5V #PWR0108
+U 1 1 60D41BF2
+P 1850 5950
+F 0 "#PWR0108" H 1850 5800 50  0001 C CNN
+F 1 "+5V" V 1865 6078 50  0000 L CNN
+F 2 "" H 1850 5950 50  0001 C CNN
+F 3 "" H 1850 5950 50  0001 C CNN
+	1    1850 5950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1850 5950 2250 5950
+Wire Wire Line
+	2250 5950 2250 5875
+Wire Wire Line
+	2250 5875 2400 5875
+Text Notes 7000 6750 0    118  ~ 24
+ESP-12_WLED-Controller
+Text Notes 7025 6900 0    79   ~ 16
+CC BY-SA 4.0
+Text Notes 7025 7100 0    63   ~ 13
+V0.9 - 06/2021 - P.Wulfert
 $EndSCHEMATC

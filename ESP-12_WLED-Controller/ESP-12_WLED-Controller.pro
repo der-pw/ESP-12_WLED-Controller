@@ -1,4 +1,4 @@
-update=22.06.2021 11:52:42
+update=23.06.2021 13:17:18
 version=1
 last_client=kicad
 [general]
@@ -242,10 +242,10 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=./
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
 SpiceAjustPassiveValues=0
-LabSize=50
+LabSize=63
 ERC_TestSimilarLabels=1
