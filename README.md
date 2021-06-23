@@ -10,6 +10,6 @@ Als Levelshifter werwende ich einen 74LVC1G125.
 Zusätzlich kann die Versorgungsspannung für den LED-Strip über einen P-Kanal MOSFET abgeschaltet werden. Auch im ausgeschalteten Zustand verbrauchen die NEOPIXEL-Strips Strom (ca. 1mA/Pixel). 
 Footprints gibt es einmal als SOIC-8 und einmal als TO-220.  
 Praktischerweise bietet WLED hier die Möglichkeit über GPIO12 ein "Relay" zu schalten. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872  
-Vor dem P-MOSFET sitz ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber, um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am ESP2866 durchschaltet.  
+Vor dem P-MOSFET sitz ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber, um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am GPIO12 des ESP2866 durchschaltet.  
   
 Auf diese Weise, kann man fertig gebackende WLED-Binaries verwenden ohne Änderungen vorzunehmen.
