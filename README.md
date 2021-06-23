@@ -9,6 +9,11 @@ Die Idee war es, einen Controller zu bauen, der mit Pegelwandler arbeitet um das
 Als Levelshifter werwende ich einen 74LVC1G125.
 Zusätzlich kann die Versorgungsspannung für den LED-Strip über einen P-Kanal MOSFET abgeschaltet werden. Auch im ausgeschalteten Zustand verbrauchen die NEOPIXEL-Strips Strom (ca. 1mA/Pixel). 
 Footprints gibt es einmal als SOIC-8 und einmal als TO-220.  
-Praktischerweise bietet WLED hier die Möglichkeit über GPIO12 ein "Relay" zu schalten. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872  
-Vor dem P-MOSFET sitz ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber, um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am GPIO12 des ESP2866 durchschaltet.  
+Praktischerweise bietet WLED hier die Möglichkeit über einen frei definierten Pin ein "Relay" zu schalten. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872  
+Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber, um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am GPIO12 des ESP2866 durchschaltet.  
+
+Die Platine verwendet folgendes Pin-Setting.
+Auf GPIO0 kann ein externer Button verwendet werden, gleichzeitung initiert man darüber den Flashvorgang.
+
+![Pin-setting](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Pin-setting.jpg)
 
