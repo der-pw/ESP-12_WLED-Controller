@@ -14,7 +14,7 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
 
 Die Platine verwendet folgendes Pin-Setting.
 Auf GPIO0 kann ein externer Button verwendet werden zum Ein- und Ausschalten und zusätzlich initiert man darüber den Flashvorgang.
-An GPIO2 hängt das Datensignal und über GPIO12 wird der MOSFET geschaltet.
+An GPIO4 hängt das Datensignal und über GPIO12 wird der MOSFET geschaltet.
 
 ![Pin-setting](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Pin-setting.jpg)
 
