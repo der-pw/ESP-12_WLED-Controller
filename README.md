@@ -1,11 +1,12 @@
 # ESP-12_WLED-Controller  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Controller speziell für [WLED](https://github.com/Aircoookie/WLED) oder auch Alternativen.
 
-### Versionen:
- - 0.9 erstes Layout veröffentlicht
- - 1.0 kleine Änderungen und Fehler beseitigt
-
-![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
+Übersicht:
+ - [Versionen](https://github.com/der-pw/ESP-12_WLED-Controller#versionen)
+ - [Gehäuse](https://github.com/der-pw/ESP-12_WLED-Controller#gehäuse) 
+ - [Einstellungen](https://github.com/der-pw/ESP-12_WLED-Controller#einstellungen)
+ - [Warum GPIO4?](https://github.com/der-pw/ESP-12_WLED-Controller#warum-gpio4-und-nicht-standard-gpio2)
+ - [Teileliste](https://github.com/der-pw/ESP-12_WLED-Controller#teileliste)
 
 Die Idee war es, einen Controller zu bauen, der mit Pegelwandler arbeitet um das Datensignal, welches der ESP8266 nur mit 3,3V Pegel ausgibt, auf die vom LED-Strip benötigten 5V zu setzen. Gerade bei langen Datenleitungen kann ein 3,3V-Pegel sich schneller "verwaschen". 
 Als Levelshifter werwende ich einen **74LVC1G125**.
@@ -13,6 +14,13 @@ Zusätzlich kann die Versorgungsspannung für den LED-Strip über einen P-Kanal 
 Footprints gibt es einmal als SOIC-8 und einmal als TO-220.  
 Praktischerweise bietet WLED hier die Möglichkeit über einen frei definierten Pin ein "Relay" zu schalten. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872  
 Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber, um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am GPIO12 des ESP2866 durchschaltet.
+
+
+### Versionen:
+ - 0.9 erstes Layout veröffentlicht
+ - 1.0 kleine Änderungen und Fehler beseitigt
+
+![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
 
 ### Gehäuse
 ![PCB case](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Case/Controller_case.jpg)
@@ -31,6 +39,22 @@ An **GPIO4** hängt das Datensignal und über **GPIO12** wird der MOSFET geschal
 In WLED wird das Datensignal in ausgeschaltetem Zustang auf *HIGH* gelegt. Vermutlich um über einen N-MOSFET (einfacher) den Strip spannungsfrei zu bekommen und keinen "Rücklauf" über DATA zu haben.
 Ich habe mich in meiner Schaltung bewusst für einen P-Kanal MOSFET entschieden weil so die Versorgungsspannung zum Strip abgeklemmt wird und nicht nur GND.
 Auf GPIO4 wird zudem das Datensignal auf *LOW* geschaltet. Der Strip ist "soft off" quasi spannungsfrei.
+
+### Teileliste
+Bauteil        | Bestellnummer    | Anzahl | Kommentar
+-------------- | ---------------- | ------ | ---------
+C1, C2         | X7R-G0805 10N    |   2    | -
+C3             | X7R-G0805 100N   |   1    | -
+C4             | NHG-A 1,0M 6,3   |   1    | 11,5 mm hoch
+J1             | CTB0509-4        |   1    | bis 10 A
+Q1             | IRLML 6344       |   1    | -
+Q2             | IRF 7410         |   1    | -
+R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
+R6             | RND 0805 1 470   |   1    | -
+SW1            | -                |   1    | -
+U1             | TS 1117 BCW33    |   1    | -
+U2             | -                |   1    | ESP-12E
+U4             | SN 74LVC1G125DBV |   1    | -
 
 Diese Platine kann mit einem fertigen Binary verwendet werden.
 
