@@ -1,4 +1,6 @@
 # ESP-12_WLED-Controller  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[English Version below](https://github.com/der-pw/ESP-12_WLED-Controller#english)
+
 Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Controller speziell für [WLED](https://github.com/Aircoookie/WLED) oder auch Alternativen.
 
 Übersicht:
@@ -58,5 +60,60 @@ U4             | SN 74LVC1G125DBV |   1    | -
 
 Diese Platine kann mit einem fertigen Binary verwendet werden.
 
+----
+## English
 
+Design idea of an EPS-12 (E / F) based NeoPixel (WS2812B, WS2811, SK6812) controller especially for WLED or alternatives.
+
+Overview:
+ - [Versions](https://github.com/der-pw/ESP-12_WLED-Controller#versions)
+ - [Case](https://github.com/der-pw/ESP-12_WLED-Controller#case) 
+ - [Settings](https://github.com/der-pw/ESP-12_WLED-Controller#settings)
+ - [Why GPIO4?](https://github.com/der-pw/ESP-12_WLED-Controller#why-gpio4-instead-of-standard-gpio2)
+ - [Parts list](https://github.com/der-pw/ESP-12_WLED-Controller#parts-list)
+ 
+
+The idea was to build a controller that works with a level converter to set the data signal, which the ESP8266 only outputs with 3.3V level, to the 5V required by the LED strip. A 3.3V level can "wash out" more quickly, especially with long data lines. As a level shifter I use a 74LVC1G125. In addition, the supply voltage for the LED strip can be switched off via a P-channel MOSFET. Even when switched off, the NEOPIXEL strips consume electricity (approx. 1 mA / pixel). There are footprints once as SOIC-8 and once as TO-220.
+Conveniently, WLED offers the possibility to switch a "relay" via a freely defined pin. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872
+Another N-MOSFET sits in front of the P-MOSFET. On the one hand it works as a driver to operate the P-MOSFET with 5V logic level and on the other hand as an inverter so that the large MOSFET switches through at a HIGH level at the GPIO12 of the ESP2866.
+
+### Versions:
+0.9 first layout published  
+1.0 minor changes and bugs fixed  
+
+![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
+
+### Case
+![PCB case](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Case/Controller_case.jpg)
+There is a simple case. The two halves of the housing are clipped together. The circuit board is attached to the housing by means of 2x5mm pan head screws (coarse thread).
+
+### Settings
+The board uses the following pin setting.
+An external button can be used on GPIO0 to switch it on and off and also to initiate the flash process.
+The data signal is connected to GPIO4 and the MOSFET is switched via GPIO12.
+
+![Pin-setting](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Pin-setting.jpg)
+
+### Why GPIO4 instead of standard GPIO2?
+In WLED, the data signal is set to HIGH when the status is switched off. Presumably to get the strip voltage-free via an N-MOSFET (may easier) and not to have a "way back" via DATA. I made a conscious decision to use a P-channel MOSFET in my circuit because it disconnects the supply voltage to the strip and not just GND. The data signal on GPIO4 is also switched to LOW. The strip is virtually tension-free "soft off".
+
+### Parts list
+
+Part           | Order Number     | Amount | Comment
+-------------- | ---------------- | ------ | ---------
+C1, C2         | X7R-G0805 10N    |   2    | -
+C3             | X7R-G0805 100N   |   1    | -
+C4             | NHG-A 1,0M 6,3   |   1    | 11,5 mm high
+J1             | CTB0509-4        |   1    | till 10 A
+Q1             | IRLML 6344       |   1    | -
+Q2             | IRF 7410         |   1    | -
+R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
+R6             | RND 0805 1 470   |   1    | -
+SW1            | -                |   1    | -
+U1             | TS 1117 BCW33    |   1    | -
+U2             | -                |   1    | ESP-12E
+U4             | SN 74LVC1G125DBV |   1    | -
+
+
+This board can be used with a ready-made binary.
 
