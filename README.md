@@ -21,6 +21,7 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
 ### Versionen:
  - 0.9 erstes Layout veröffentlicht
  - 1.0 kleine Änderungen und Fehler beseitigt
+ - 1.01 C1 und C2 Korrektur der Werte (statt 10nF 10µF) hat keine Auswirkung auf die Platine
 
 ![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
 
@@ -45,7 +46,7 @@ Auf GPIO4 wird zudem das Datensignal auf *LOW* geschaltet. Der Strip ist "soft o
 ### Teileliste
 Bauteil        | Bestellnummer    | Anzahl | Kommentar
 -------------- | ---------------- | ------ | ---------
-C1, C2         | X7R-G0805 10N    |   2    | -
+C1, C2         | X7R-G0805 10U    |   2    | -
 C3             | X7R-G0805 100N   |   1    | -
 C4             | NHG-A 1,0M 6,3   |   1    | 11,5 mm hoch
 J1             | CTB0509-4        |   1    | bis 10 A
@@ -78,8 +79,9 @@ Conveniently, WLED offers the possibility to switch a "relay" via a freely defin
 Another N-MOSFET sits in front of the P-MOSFET. On the one hand it works as a driver to operate the P-MOSFET with 5V logic level and on the other hand as an inverter so that the large MOSFET switches through at a HIGH level at the GPIO12 of the ESP2866.
 
 ### Versions:
-0.9 first layout published  
-1.0 minor changes and bugs fixed  
+ - 0.9 first layout published
+ - 1.0 minor changes and bugs fixed
+ - 1.01 C1 and C2 Values fixed (10µF instead of 10nF) has no effects of the PCB
 
 ![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
 
@@ -101,7 +103,7 @@ In WLED, the data signal is set to HIGH when the status is switched off. Presuma
 
 Part           | Order Number     | Amount | Comment
 -------------- | ---------------- | ------ | ---------
-C1, C2         | X7R-G0805 10N    |   2    | -
+C1, C2         | X7R-G0805 10U    |   2    | -
 C3             | X7R-G0805 100N   |   1    | -
 C4             | NHG-A 1,0M 6,3   |   1    | 11,5 mm high
 J1             | CTB0509-4        |   1    | till 10 A
