@@ -81,7 +81,7 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand it works as a dr
 ### Versions:
  - 0.9 first layout published
  - 1.0 minor changes and bugs fixed
- - 1.01 C1 and C2 Values fixed (10µF instead of 10nF) has no effects of the PCB
+ - 1.01 C1 and C2 wrong Values fixed (10µF instead of 10nF) has no effects of the PCB
 
 ![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
 
