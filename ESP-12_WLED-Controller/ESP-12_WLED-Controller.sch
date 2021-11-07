@@ -118,7 +118,7 @@ L Device:C C1
 U 1 1 60CA944D
 P 1700 1350
 F 0 "C1" H 1815 1396 50  0000 L CNN
-F 1 "10nF" H 1815 1305 50  0000 L CNN
+F 1 "10µF" H 1815 1305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1738 1200 50  0001 C CNN
 F 3 "~" H 1700 1350 50  0001 C CNN
 	1    1700 1350
@@ -131,7 +131,7 @@ L Device:C C2
 U 1 1 60CA9B51
 P 3025 1350
 F 0 "C2" H 3140 1396 50  0000 L CNN
-F 1 "10nF" H 3140 1305 50  0000 L CNN
+F 1 "10µF" H 3140 1305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3063 1200 50  0001 C CNN
 F 3 "~" H 3025 1350 50  0001 C CNN
 	1    3025 1350
@@ -738,7 +738,7 @@ ESP-12_WLED-Controller
 Text Notes 7025 6900 0    79   ~ 16
 CC BY-SA 4.0
 Text Notes 7025 7100 0    63   ~ 13
-V1.0 - 07/2021 - P.Wulfert
+V1.01 - 11/2021 - P.Wulfert
 Text Notes 10100 3725 0    35   ~ 0
 use here an alternative \nTHT P-MOSFET
 Wire Notes Line
