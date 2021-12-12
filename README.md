@@ -22,6 +22,7 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
  - 0.9 erstes Layout veröffentlicht
  - 1.0 kleine Änderungen und Fehler beseitigt
  - 1.01 C1 und C2 Korrektur der Werte (statt 10nF 10µF) hat keine Auswirkung auf die Platine
+ - 1.1 Gatewiderstand R9 hinzugefügt
 
 ![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
 
@@ -53,6 +54,7 @@ J1             | CTB0509-4        |   1    | bis 10 A
 Q1             | IRLML 6344       |   1    | -
 Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
+R9             | RND 0805 1 100   |   1    | -
 R6             | RND 0805 1 470   |   1    | -
 SW1            | -                |   1    | -
 U1             | TS 1117 BCW33    |   1    | -
@@ -82,6 +84,7 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand it works as a dr
  - 0.9 first layout published
  - 1.0 minor changes and bugs fixed
  - 1.01 C1 and C2 wrong Values fixed (10µF instead of 10nF) has no effects of the PCB
+ - 1.1 added gate resistor R9
 
 ![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
 
@@ -110,6 +113,7 @@ J1             | CTB0509-4        |   1    | till 10 A
 Q1             | IRLML 6344       |   1    | -
 Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
+R9             | RND 0805 1 100   |   1    | -
 R6             | RND 0805 1 470   |   1    | -
 SW1            | -                |   1    | -
 U1             | TS 1117 BCW33    |   1    | -

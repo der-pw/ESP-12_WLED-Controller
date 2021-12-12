@@ -576,7 +576,7 @@ Text GLabel 6275 1900 2    50   Input ~ 0
 GPIO2
 Wire Wire Line
 	6175 1900 6275 1900
-Text GLabel 7975 4200 0    50   Input ~ 0
+Text GLabel 7375 4200 0    50   Input ~ 0
 RELAY
 Wire Wire Line
 	3875 1200 3025 1200
@@ -738,7 +738,7 @@ ESP-12_WLED-Controller
 Text Notes 7025 6900 0    79   ~ 16
 CC BY-SA 4.0
 Text Notes 7025 7100 0    63   ~ 13
-V1.01 - 11/2021 - P.Wulfert
+V1.1 - 12/2021 - P.Wulfert
 Text Notes 10100 3725 0    35   ~ 0
 use here an alternative \nTHT P-MOSFET
 Wire Notes Line
@@ -751,4 +751,17 @@ Wire Notes Line
 	4625 6925 4625 5325
 Text Notes 4700 6825 0    39   ~ 0
 Use Transil-Diode as MOSFET Flyback protection.\n
+$Comp
+L Device:R R9
+U 1 1 61B66D02
+P 7825 4200
+F 0 "R9" V 7750 4175 50  0000 L CNN
+F 1 "100R" V 7825 4100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7755 4200 50  0001 C CNN
+F 3 "~" H 7825 4200 50  0001 C CNN
+	1    7825 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7375 4200 7675 4200
 $EndSCHEMATC
