@@ -54,8 +54,8 @@ J1             | CTB0509-4        |   1    | bis 10 A
 Q1             | IRLML 6344       |   1    | -
 Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
-R9             | RND 0805 1 100   |   1    | -
 R6             | RND 0805 1 470   |   1    | -
+R9             | RND 0805 1 100   |   1    | -
 SW1            | -                |   1    | -
 U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
@@ -113,8 +113,8 @@ J1             | CTB0509-4        |   1    | till 10 A
 Q1             | IRLML 6344       |   1    | -
 Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
-R9             | RND 0805 1 100   |   1    | -
 R6             | RND 0805 1 470   |   1    | -
+R9             | RND 0805 1 100   |   1    | -
 SW1            | -                |   1    | -
 U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
@@ -122,4 +122,3 @@ U4             | SN 74LVC1G125DBV |   1    | -
 
 
 This board can be used with a ready-made binary.
-
