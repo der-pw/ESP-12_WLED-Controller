@@ -9,6 +9,7 @@ Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Contro
  - [Einstellungen](https://github.com/der-pw/ESP-12_WLED-Controller#einstellungen)
  - [Warum GPIO4?](https://github.com/der-pw/ESP-12_WLED-Controller#warum-gpio4-und-nicht-standard-gpio2)
  - [Teileliste](https://github.com/der-pw/ESP-12_WLED-Controller#teileliste)
+ - [Anschluss Hiweise](wiring.md) ->
 
 Die Idee war es, einen Controller zu bauen, der mit Pegelwandler arbeitet um das Datensignal, welches der ESP8266 nur mit 3,3V Pegel ausgibt, auf die vom LED-Strip benötigten 5V zu setzen. Gerade bei langen Datenleitungen kann ein 3,3V-Pegel sich schneller "verwaschen". 
 Als Levelshifter werwende ich einen **74LVC1G125**.
@@ -24,10 +25,10 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
  - 1.01 C1 und C2 Korrektur der Werte (statt 10nF 10µF) hat keine Auswirkung auf die Platine
  - 1.1 Gatewiderstand R9 hinzugefügt
 
-![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
+![PCB top](img/PCB-top.jpg)
 
 ### Gehäuse
-![PCB case](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Case/Controller_case.jpg)
+![PCB case](Case/Controller_case.jpg)
 Es gibt ein simples Gehäuse. 
 Die beiden Geäusehälften werden zusammen geklipst.
 Die Platine wird mittels 2x5mm Linsenkopfschrauben (Grobgewinde) im Gehäuse befestigt.
@@ -37,7 +38,7 @@ Die Platine verwendet folgendes Pin-Setting.
 Auf **GPIO0** kann ein externer Button verwendet werden, zum Ein- und Ausschalten und zusätzlich initiert man darüber den Flashvorgang.  
 An **GPIO4** hängt das Datensignal und über **GPIO12** wird der MOSFET geschaltet.
 
-![Pin-setting](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Pin-setting.jpg)
+![Pin-setting](img/Pin-setting.jpg)
 
 #### Warum GPIO4 und nicht Standard GPIO2?
 In WLED wird das Datensignal in ausgeschaltetem Zustang auf *HIGH* gelegt. Vermutlich um über einen N-MOSFET (einfacher) den Strip spannungsfrei zu bekommen und keinen "Rücklauf" über DATA zu haben.
@@ -56,12 +57,14 @@ Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
 R6             | RND 0805 1 470   |   1    | -
 R9             | RND 0805 1 100   |   1    | -
+D1             | SS 14 Schottkydiode   |   1    | Abhängig von der Last
 SW1            | -                |   1    | -
 U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
 U4             | SN 74LVC1G125DBV |   1    | -
 
 Diese Platine kann mit einem fertigen Binary verwendet werden.
+
 
 ----
 ## English
@@ -74,6 +77,7 @@ Overview:
  - [Settings](https://github.com/der-pw/ESP-12_WLED-Controller#settings)
  - [Why GPIO4?](https://github.com/der-pw/ESP-12_WLED-Controller#why-gpio4-instead-of-standard-gpio2)
  - [Parts list](https://github.com/der-pw/ESP-12_WLED-Controller#parts-list)
+ - [Connecting Hints](wiring.md) ->
  
 
 The idea was to build a controller that works with a level converter to set the data signal, which the ESP8266 only outputs with 3.3V level, to the 5V required by the LED strip. A 3.3V level can "wash out" more quickly, especially with long data lines. As a level shifter I use a 74LVC1G125. In addition, the supply voltage for the LED strip can be switched off via a P-channel MOSFET. Even when switched off, the NEOPIXEL strips consume electricity (approx. 1 mA / pixel). There are footprints once as SOIC-8 and once as TO-220.
@@ -86,10 +90,10 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand it works as a dr
  - 1.01 C1 and C2 wrong Values fixed (10µF instead of 10nF) has no effects of the PCB
  - 1.1 added gate resistor R9
 
-![PCB top](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/PCB_top.jpg)
+![PCB top](img/PCB-top.jpg)
 
 ### Case
-![PCB case](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Case/Controller_case.jpg)
+![PCB case](Case/Controller_case.jpg)
 There is a simple case. The two halves of the housing are clipped together. The circuit board is attached to the housing by means of 2x5mm pan head screws (coarse thread).
 
 ### Settings
@@ -97,7 +101,7 @@ The board uses the following pin setting.
 An external button can be used on GPIO0 to switch it on and off and also to initiate the flash process.
 The data signal is connected to GPIO4 and the MOSFET is switched via GPIO12.
 
-![Pin-setting](https://github.com/der-pw/ESP-12_WLED-Controller/blob/main/Pin-setting.jpg)
+![Pin-setting](img/Pin-setting.jpg)
 
 ### Why GPIO4 instead of standard GPIO2?
 In WLED, the data signal is set to HIGH when the status is switched off. Presumably to get the strip voltage-free via an N-MOSFET (may easier) and not to have a "way back" via DATA. I made a conscious decision to use a P-channel MOSFET in my circuit because it disconnects the supply voltage to the strip and not just GND. The data signal on GPIO4 is also switched to LOW. The strip is virtually tension-free "soft off".
@@ -115,6 +119,7 @@ Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
 R6             | RND 0805 1 470   |   1    | -
 R9             | RND 0805 1 100   |   1    | -
+D1             | SS 14 Schottky diode   |   1    | depends on the load
 SW1            | -                |   1    | -
 U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
