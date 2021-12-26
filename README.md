@@ -9,7 +9,7 @@ Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Contro
  - [Einstellungen](https://github.com/der-pw/ESP-12_WLED-Controller#einstellungen)
  - [Warum GPIO4?](https://github.com/der-pw/ESP-12_WLED-Controller#warum-gpio4-und-nicht-standard-gpio2)
  - [Teileliste](https://github.com/der-pw/ESP-12_WLED-Controller#teileliste)
- - [Anschluss Hiweise](wiring.md) ->
+ - [Anschluss Hinweise](wiring.md) ->
 
 Die Idee war es, einen Controller zu bauen, der mit Pegelwandler arbeitet um das Datensignal, welches der ESP8266 nur mit 3,3V Pegel ausgibt, auf die vom LED-Strip benötigten 5V zu setzen. Gerade bei langen Datenleitungen kann ein 3,3V-Pegel sich schneller "verwaschen". 
 Als Levelshifter werwende ich einen **74LVC1G125**.
