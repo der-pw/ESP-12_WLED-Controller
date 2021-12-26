@@ -7,7 +7,7 @@
 Der Jumper ```BTN/FLASH``` ist während des Flashvorganges, mindestens aber bei "Power ON" gebrückt, andernfalls wird der Flashvorgang nicht initialisiert.  
 
 
-### Anschluss der Vorsogungsspannung und des LED-Strips
+### Anschluss der Versogungsspannung und des LED-Strips
 ![FTDI-Adapter](img/STRP-PWR_conn.jpg)
 
 ```GND``` teilen sich Strip und Netzteil aus Platzgründen  
