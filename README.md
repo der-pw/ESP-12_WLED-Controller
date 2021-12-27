@@ -52,7 +52,7 @@ Bauteil        | Bestellnummer    | Anzahl | Kommentar
 C1, C2         | X7R-G0805 10U    |   2    | -
 C3             | X7R-G0805 100N   |   1    | -
 C4             | NHG-A 1,0M 6,3   |   1    | 11,5 mm hoch
-J1             | CTB0509-4        |   1    | bis 10 A
+J1             | CTB1202-4BK      |   1    | bis 16 A
 Q1             | IRLML 6344       |   1    | -
 Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
@@ -64,7 +64,10 @@ U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
 U4             | SN 74LVC1G125DBV |   1    | -
 
-Diese Platine kann mit einem fertigen Binary verwendet werden.
+Teileliste bei Reichelt: https://www.reichelt.de/my/1858254
+*bitte auf Vollständigkeit checken*
+
+Diese Platine kann mit einem [fertigen Binary](https://install.wled.me/) verwendet werden.
 
 
 ----
@@ -114,7 +117,7 @@ Part           | Order Number     | Amount | Comment
 C1, C2         | X7R-G0805 10U    |   2    | -
 C3             | X7R-G0805 100N   |   1    | -
 C4             | NHG-A 1,0M 6,3   |   1    | 11,5 mm high
-J1             | CTB0509-4        |   1    | till 10 A
+J1             | CTB1202-4BK      |   1    | till 16 A
 Q1             | IRLML 6344       |   1    | -
 Q2             | IRF 7410         |   1    | -
 R1..R5, R7, R8 | RND 0805 1 10K   |   7    | -
@@ -126,5 +129,7 @@ U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
 U4             | SN 74LVC1G125DBV |   1    | -
 
+Parts list at Reichelt: https://www.reichelt.de/my/1858254
+*please check completeness*
 
-This board can be used with a pre compiled binary.
+PCB can be used with a [pre compiled binary](https://install.wled.me/).

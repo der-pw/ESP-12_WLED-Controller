@@ -4,23 +4,24 @@
 ### Anschluss des Serial-UART Konverter (hier FTDI Adapter)
 ![FTDI-Adapter](img/FTDI_conn.jpg)
 
-Der Jumper ```BTN/FLASH``` ist während des Flashvorganges, mindestens aber bei "Power ON" gebrückt, andernfalls wird der Flashvorgang nicht initialisiert.  
+Der Jumper `BTN/FLASH` ist während des Flashvorganges, mindestens aber bei "Power ON" gebrückt, andernfalls wird der Flashvorgang nicht initialisiert.  
 
 #### Installation von WLED
 Die einfachste Möglichkeit, WLED zu installieren ist über die "ESP Web Tools" unter https://install.wled.me/ .  
 Dort lassen sich fertige Binaries, ganz einfach über den Browser installieren. Weitere Infos findest du unter: https://kno.wled.ge/basics/install-binary/ .  
 
-
+##### Doppelfunktion von BTN/FLASH
+Später kann im normalen Betrieb von WLED an `BTN/FLASH` ein Taster angeschlossen werden, es besteht die Möglichkeit, den Strip an und aus zu schalten, oder [Makros zu steuern](https://kno.wled.ge/features/macros/). Wichtig hierbei ist, dass man einen NO Taster verwendet, sonst bootet der ESP in die Flash Sequenz.
 
 ### Anschluss der Versogungsspannung und des LED-Strips
 ![FTDI-Adapter](img/STRP-PWR_conn.jpg)
 
-```GND``` teilen sich Strip und Netzteil aus Platzgründen  
+```*GND``` teilen sich Strip und Netzteil aus Platzgründen    
 ```DATA``` Anschluss an die Datenleitung des LED-Strips  
 ```5V``` Versorgungsspannung vom Netzteil  
 ```SW_5V``` geschaltete Versorgungsspannung des LED-Strips, wird bei Nichtbenutzen deaktiviert, somit ist der Strip spannungsfrei
 
-----
+---
   
 
 ## English
@@ -28,12 +29,15 @@ Dort lassen sich fertige Binaries, ganz einfach über den Browser installieren. 
 ### Connecting Serial-UART converter (in this case FTDI adapter)
 ![FTDI-Adapter](img/FTDI_conn.jpg)
 
-The Jumper ```BTN/FLASH``` is bridges during des flashing progress, alternative at start up.
-This initializes the flashing sequence.
+The Jumper ```BTN/FLASH``` is bridges during des flashing progress, alternative at start up.  
 
 #### Installation of WLED
 The easiest way to install WLED is via the "ESP Web Tools" at https://install.wled.me/ .  
 Pre compiled binaries can be easily installed in your browser. You can find more information at: https://kno.wled.ge/basics/install-binary/ . 
+
+##### Double function of BTN/FLASH
+
+Later, during normal WLED operation mode, a button can be connected to `BTN / FLASH`, so it's possible to switch the strip on and off, or [control any macros](https://kno.wled.ge/features/macros/). It's important to use an NO button, otherwise the ESP will boot into the flashing sequence. 
 
 ### Connecting power supply and LED strip
 ![FTDI-Adapter](img/STRP-PWR_conn.jpg)
