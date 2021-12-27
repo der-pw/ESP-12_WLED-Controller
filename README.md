@@ -44,7 +44,7 @@ An **GPIO4** hängt das Datensignal und über **GPIO12** wird der MOSFET geschal
 In WLED wird das Datensignal in ausgeschaltetem Zustang auf *HIGH* gelegt. Vermutlich um über einen N-MOSFET (einfacher) den Strip spannungsfrei zu bekommen und keinen "Rücklauf" über DATA zu haben.
 Ich habe mich in meiner Schaltung bewusst für einen P-Kanal MOSFET entschieden weil so die Versorgungsspannung zum Strip abgeklemmt wird und nicht nur GND.
 Auf GPIO4 wird zudem das Datensignal auf *LOW* geschaltet. Der Strip ist "soft off" quasi spannungsfrei.
-Inzwischen bietet WLED die Möglichkeit den "Relay"-Port "active HIGH" oder eben invertiert zu schalten. Active High ist bei dieser Schaltung richtig.
+
 
 ### Teileliste
 Bauteil        | Bestellnummer    | Anzahl | Kommentar
