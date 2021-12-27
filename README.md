@@ -64,7 +64,7 @@ U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
 U4             | SN 74LVC1G125DBV |   1    | -
 
-Teileliste bei Reichelt: https://www.reichelt.de/my/1858254
+Teileliste bei Reichelt: https://www.reichelt.de/my/1858254  
 *bitte auf Vollständigkeit checken*
 
 Diese Platine kann mit einem [fertigen Binary](https://install.wled.me/) verwendet werden.
@@ -129,7 +129,7 @@ U1             | TS 1117 BCW33    |   1    | -
 U2             | -                |   1    | ESP-12E
 U4             | SN 74LVC1G125DBV |   1    | -
 
-Parts list at Reichelt: https://www.reichelt.de/my/1858254
+Parts list at Reichelt: https://www.reichelt.de/my/1858254  
 *please check completeness*
 
 PCB can be used with a [pre compiled binary](https://install.wled.me/).
