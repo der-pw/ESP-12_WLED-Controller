@@ -16,7 +16,7 @@ Als Levelshifter werwende ich einen **74LVC1G125**.
 Zusätzlich kann die Versorgungsspannung für den LED-Strip über einen P-Kanal MOSFET abgeschaltet werden. Auch im ausgeschalteten Zustand verbrauchen die NEOPIXEL-Strips Strom (ca. 1mA/Pixel). 
 Footprints gibt es einmal als SOIC-8 und einmal als TO-220.  
 Praktischerweise bietet WLED hier die Möglichkeit über einen frei definierten Pin ein "Relay" zu schalten. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872  
-Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber, um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am GPIO12 des ESP2866 durchschaltet.
+Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der große MOSFET bei einem HIGH-Pegel am GPIO12 des ESP2866 durchschaltet.
 
 
 ### Versionen:
@@ -44,6 +44,7 @@ An **GPIO4** hängt das Datensignal und über **GPIO12** wird der MOSFET geschal
 In WLED wird das Datensignal in ausgeschaltetem Zustang auf *HIGH* gelegt. Vermutlich um über einen N-MOSFET (einfacher) den Strip spannungsfrei zu bekommen und keinen "Rücklauf" über DATA zu haben.
 Ich habe mich in meiner Schaltung bewusst für einen P-Kanal MOSFET entschieden weil so die Versorgungsspannung zum Strip abgeklemmt wird und nicht nur GND.
 Auf GPIO4 wird zudem das Datensignal auf *LOW* geschaltet. Der Strip ist "soft off" quasi spannungsfrei.
+Inzwischen bietet WLED die Möglichkeit den "Relay"-Port "active HIGH" oder eben invertiert zu schalten. Active High ist bei dieser Schaltung richtig.
 
 ### Teileliste
 Bauteil        | Bestellnummer    | Anzahl | Kommentar
@@ -126,4 +127,4 @@ U2             | -                |   1    | ESP-12E
 U4             | SN 74LVC1G125DBV |   1    | -
 
 
-This board can be used with a ready-made binary.
+This board can be used with a pre compiled binary.
