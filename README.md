@@ -69,6 +69,10 @@ Teileliste bei Reichelt: https://www.reichelt.de/my/1858254
 
 Diese Platine kann mit einem [fertigen Binary](https://install.wled.me/) verwendet werden.
 
+## Dankeschön!  
+
+Ein besonderer Dank geht an [Aircookie](https://github.com/Aircoookie) und allen Beteiligten, die am [WLED](https://github.com/Aircoookie/WLED) Projekt mitarbeiten.
+
 
 ----
 ## English
@@ -133,3 +137,7 @@ Parts list at Reichelt: https://www.reichelt.de/my/1858254
 *please check completeness*
 
 PCB can be used with a [pre compiled binary](https://install.wled.me/).
+
+## Thanks!  
+
+Special thanks to [Aircookie](https://github.com/Aircoookie) and all the contributors at the [WLED](https://github.com/Aircoookie/WLED) project.
