@@ -1744,7 +1744,7 @@
     (effects (font (size 0.889 0.889)) (justify left bottom))
     (uuid 76afa8e0-9b3a-439d-843c-ad039d3b6354)
   )
-  (text "V1.1 - 12/2021 - P.Wulfert" (at 178.435 180.34 0)
+  (text "V1.2 - 12/2021 - P.Wulfert" (at 178.435 180.34 0)
     (effects (font (size 1.6002 1.6002) (thickness 0.32) bold) (justify left bottom))
     (uuid 946404ba-9297-43ec-9d67-30184041145f)
   )
