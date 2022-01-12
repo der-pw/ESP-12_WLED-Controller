@@ -24,6 +24,7 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
  - 1.0 kleine Änderungen und Fehler beseitigt
  - 1.01 C1 und C2 Korrektur der Werte (statt 10nF 10µF) hat keine Auswirkung auf die Platine
  - 1.1 Gatewiderstand R9 hinzugefügt
+ - 1.2 Gatewiderstand Wert auf 300Ohm geändert
 
 ![PCB top](img/PCB-top.jpg)
 
@@ -97,6 +98,7 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand it works as a dr
  - 1.0 minor changes and bugs fixed
  - 1.01 C1 and C2 wrong Values fixed (10µF instead of 10nF) has no effects of the PCB
  - 1.1 added gate resistor R9
+ - 1.2 change gate resisitr value to 300Ohm
 
 ![PCB top](img/PCB-top.jpg)
 
