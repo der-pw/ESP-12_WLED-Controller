@@ -4,7 +4,7 @@
 #### Achtung
 **Der aktuelle Master-Branch enthält die ungetestete Version 2.0!**  
 Die Platine wurde an einigen Stellen geändert. Daher gibt es noch keiner Gerberdaten.  
-Die letzte getestete Version ist [V1.2](https://github.com/der-pw/ESP-12_WLED-Controller/tree/V1.2)  
+Die letzte getestete und bereits erfolgreich verwendete Version ist [V1.2](https://github.com/der-pw/ESP-12_WLED-Controller/tree/V1.2)  
 
 ----
 
@@ -93,7 +93,7 @@ Ein besonderer Dank geht an [Aircookie](https://github.com/Aircoookie) und allen
 
 **The current master branch contains the untested version 2.0!**  
 Circuit board has some changes. Therefore there is no Gerber data yet.  
-The last tested version is [V1.2](https://github.com/der-pw/ESP-12_WLED-Controller/tree/V1.2).
+The last tested and already successfully used version is [V1.2](https://github.com/der-pw/ESP-12_WLED-Controller/tree/V1.2).
 
 ----
 
