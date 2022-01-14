@@ -1,6 +1,13 @@
 # ESP-12_WLED-Controller  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [English Version below](https://github.com/der-pw/ESP-12_WLED-Controller#english)
 
+#### Achtung
+**Der aktuelle Master-Branch enthält die ungetestete Version 2.0!**  
+Die Platine wurde an einigen Stellen geändert. Daher gibt es noch keiner Gerberdaten.  
+Die letzte getestete Version ist [V1.2](https://github.com/der-pw/ESP-12_WLED-Controller/tree/V1.2)  
+
+----
+
 Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Controller speziell für [WLED](https://github.com/Aircoookie/WLED) oder auch Alternativen.
 
 Übersicht:
@@ -25,6 +32,10 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
  - 1.01 C1 und C2 Korrektur der Werte (statt 10nF 10µF) hat keine Auswirkung auf die Platine
  - 1.1 Gatewiderstand R9 hinzugefügt
  - 1.2 Gatewiderstand Wert auf 300Ohm geändert
+ - 2.0 Platinenlayout etwas überarbeitet  
+ zweiter C2 Kondensator  
+ A0 am Pinheader verfügbar gemacht, ermöglicht "sound reaction"
+ Lötjumper unter R6 zum Überbrücken gesetzt  
 
 ![PCB top](img/PCB-top.jpg)
 
@@ -78,6 +89,14 @@ Ein besonderer Dank geht an [Aircookie](https://github.com/Aircoookie) und allen
 ----
 ## English
 
+#### Attention
+
+**The current master branch contains the untested version 2.0!**  
+Circuit board has some changes. Therefore there is no Gerber data yet.  
+The last tested version is [V1.2](https://github.com/der-pw/ESP-12_WLED-Controller/tree/V1.2).
+
+----
+
 Design idea of an EPS-12 (E / F) based NeoPixel (WS2812B, WS2811, SK6812) controller especially for WLED or alternatives.
 
 Overview:
@@ -99,6 +118,10 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand it works as a dr
  - 1.01 C1 and C2 wrong Values fixed (10µF instead of 10nF) has no effects of the PCB
  - 1.1 added gate resistor R9
  - 1.2 change gate resisitr value to 300Ohm
+ - 2.0 board layout slightly revised
+ second C2 capacitor
+ A0 exposed at pin header, enables "sound reaction" feature
+ Solder jumper placed under R6 resistor to bridge it
 
 ![PCB top](img/PCB-top.jpg)
 
