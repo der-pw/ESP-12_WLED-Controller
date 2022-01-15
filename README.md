@@ -34,7 +34,7 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
  - 1.2 Gatewiderstand Wert auf 300Ohm geändert
  - 2.0 Platinenlayout etwas überarbeitet  
  zweiter C2 Kondensator  
- A0 am Pinheader verfügbar gemacht, ermöglicht "sound reaction"
+ A0 am Pinheader verfügbar gemacht, ermöglicht bspw. "sound reaction" Feature  
  Lötjumper unter R6 zum Überbrücken gesetzt  
 
 ![PCB top](img/PCB-top.jpg)
