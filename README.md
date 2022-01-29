@@ -1,6 +1,11 @@
 # ESP-12_WLED-Controller  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [English Version below](https://github.com/der-pw/ESP-12_WLED-Controller#english)
 
+## ACHTUNG! Bitte die aktuelle Version nicht nachbauen!
+Durch einen hässlichen [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) ist die Platine zwar nutzbar, aber bei einigen Effekten resettet der ESP sich nach unbestimmter Zeit. Ich überarbeite gerade das Design, und gebe es frei, sobald ich eine aktuelle Version zusammengebaut und getestet habe.
+
+----
+
 Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Controller speziell für [WLED](https://github.com/Aircoookie/WLED) oder auch Alternativen.
 
 Übersicht:
@@ -77,6 +82,9 @@ Ein besonderer Dank geht an [Aircookie](https://github.com/Aircoookie) und allen
 
 ----
 ## English
+
+## ATTENTION! Please do not build the current version!
+Due to an ugly [error in the design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) the board can be used, but the ESP resets itself after some effects indefinitely. I'm working on the design right now and will release it as soon as I've assembled and tested a current version.
 
 Design idea of an EPS-12 (E / F) based NeoPixel (WS2812B, WS2811, SK6812) controller especially for WLED or alternatives.
 
