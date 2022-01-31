@@ -1,7 +1,7 @@
 # ESP-12_WLED-Controller V1.3 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [English Version below](https://github.com/der-pw/ESP-12_WLED-Controller#english)
 
-Durch einen hässlichen [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) ist die Platine bis V1.2 zwar nutzbar, aber bei einigen Effekten resettet der ESP sich nach unbestimmter Zeit. Ich habe die Platine inzwischen überarbeitet, als V1.3 veröffentlicht und somit auch gleich den standard **GPIO02** für den Datenausgang verwendet.
+Durch einen hässlichen [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) ist der Controller bis V1.2 zwar nutzbar, aber bei einigen Effekten resettet der ESP sich nach unbestimmter Zeit. Ich habe die Platine inzwischen überarbeitet, als V1.3 veröffentlicht und somit auch gleich den standard **GPIO02** für den Datenausgang verwendet.
 
 ----
 
@@ -17,8 +17,8 @@ Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Contro
 Die Idee war es, einen Controller zu bauen, der mit Pegelwandler arbeitet um das Datensignal, welches der ESP8266 nur mit 3,3V Pegel ausgibt, auf die vom LED-Strip benötigten 5V zu setzen. Gerade bei langen Datenleitungen kann ein 3,3V-Pegel sich schneller "verwaschen". 
 Als Levelshifter werwende ich einen **74LVC1G125**.
 Zusätzlich kann die Versorgungsspannung für den LED-Strip über einen P-Kanal MOSFET abgeschaltet werden. Auch im ausgeschalteten Zustand verbrauchen die NEOPIXEL-Strips Strom (ca. 1mA/Pixel).   
-Praktischerweise bietet WLED hier die Möglichkeit über einen frei definierten Pin ein "Relay" zu schalten. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872  
-Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der Haupt-MOSFET praktisch "active HIGH" am GPIO12 des ESP2866 durchschaltet.
+Praktischerweise bietet WLED hier seit einiger Zeit, die Möglichkeit über einen frei definierten Pin ein "Relay" zu schalten.
+Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber um den P-MOSFET mit 5V Logikpegel zu schalten und zum anderen als Inverter, damit der Haupt-MOSFET praktisch "active HIGH" am GPIO12 des ESP2866 durchschaltet.
 
 ### Versionen:
  - 0.9 erstes Layout veröffentlicht
@@ -31,7 +31,8 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
  Leiterbahn verbreitert und auf zwei Lagen verteilt  
  zweiter C2 Kondensator  
  Lötjumper unter R6 zum Überbrücken gesetzt  
- zweiter GND Anschluss am Terminal
+ zweiter GND Anschluss am Terminal  
+ Datenpin von IO4 auf IO2 gelegt.
 
 ![PCB top](img/PCB-top.jpg)
 
@@ -55,7 +56,7 @@ An **GPIO2** hängt das Datensignal und über **GPIO12** wird der MOSFET geschal
 | ----- | --- | ---- | ----------- |
 | C1 | 1 | 10µF | Unpolarized capacitor |
 | C2 | 1 | 47F | Unpolarized capacitor |
-| aC2 | 1 | 100µF | Unpolarized capacitor |
+| aC2 | 1 | 100µF | optional |
 | C3, C5 | 2 | 100nF | Unpolarized capacitor |
 | C4 | 1 | 1000µF | Unpolarized capacitor |
 | D1 | 1 | Flyback diode | Diode |
