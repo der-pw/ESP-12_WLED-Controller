@@ -16,7 +16,7 @@ Später kann im normalen Betrieb von WLED an `BTN/FLASH` ein Taster angeschlosse
 ### Anschluss der Versogungsspannung und des LED-Strips
 ![FTDI-Adapter](img/STRP-PWR_conn.jpg)
 
-```GND``` teilen sich Strip und Netzteil aus Platzgründen    
+```GND``` für Netzteil- und für Stripanschluss  
 ```DATA``` Anschluss an die Datenleitung des LED-Strips  
 ```5V``` Versorgungsspannung vom Netzteil  
 ```SW_5V``` geschaltete Versorgungsspannung des LED-Strips, wird bei Nichtbenutzen deaktiviert, somit ist der Strip spannungsfrei
@@ -42,7 +42,7 @@ Later, during normal WLED operation mode, a button can be connected to `BTN / FL
 ### Connecting power supply and LED strip
 ![FTDI-Adapter](img/STRP-PWR_conn.jpg)
 
-```GND``` is common to reduce the PCB size  
+```GND``` for power supply and for the strip   
 ```DATA``` data line of the LED strip  
 ```5V``` supply voltage  
 ```SW_5V``` switched supply voltage of the LED strip is deactivated when not in use. So the strip is quite turned off
