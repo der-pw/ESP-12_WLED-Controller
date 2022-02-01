@@ -18,7 +18,7 @@ Die Idee war es, einen Controller zu bauen, der mit Pegelwandler arbeitet um das
 Als Levelshifter werwende ich einen **74LVC1G125**.
 Zusätzlich kann die Versorgungsspannung für den LED-Strip über einen P-Kanal MOSFET abgeschaltet werden. Auch im ausgeschalteten Zustand verbrauchen die NEOPIXEL-Strips Strom (ca. 1mA/Pixel).   
 Praktischerweise bietet WLED hier die Möglichkeit über einen frei definierten Pin ein "Relay" zu schalten. https://github.com/Aircoookie/WLED/issues/631#issuecomment-578551872  
-Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber um den P-MOSFET mit 5V Logikpegel zu bedienen und zum anderen als Inverter, damit der Haupt-MOSFET praktisch "active HIGH" am GPIO12 des ESP2866 durchschaltet.
+Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Treiber um den P-MOSFET mit 5V Logikpegel zu schalten  und zum anderen als Inverter, damit der Haupt-MOSFET praktisch "active HIGH" am GPIO12 des ESP2866 durchschaltet.
 
 ### Versionen:
  - 0.9 erstes Layout veröffentlicht
@@ -53,25 +53,25 @@ An **GPIO2** hängt das Datensignal und über **GPIO12** wird der MOSFET geschal
 
 | Refs | Qty | Component | Description |
 | ----- | --- | ---- | ----------- |
-| C1 | 1 | 10µF | Unpolarized capacitor |
-| C2 | 1 | 47F | Unpolarized capacitor |
-| aC2 | 1 | 100µF | Unpolarized capacitor |
-| C3, C5 | 2 | 100nF | Unpolarized capacitor |
-| C4 | 1 | 1000µF | Unpolarized capacitor |
-| D1 | 1 | Flyback diode | Diode |
-| J1 | 1 | Screw_Terminal_01x05 | Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/) |
-| J2 | 1 | Conn_01x04_Male | Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/) |
-| JP1 | 1 | BTN/FLASH |  |
-| JP2 | 1 | Jumper_2_Open | Jumper, 2-pole, open |
-| Q1 | 1 | IRLML6344 | 3.9A Id, 20V Vds, N-Channel MOSFET, SOT-23 |
-| Q2 | 1 | IRF7410 | -6.7A Id, -20V Vds, P-Channel HEXFET Power MOSFET, SO-8 |
-| R1, R2, R3, R4, R5, R7, R8 | 7 | 10k | Resistor |
-| R6 | 1 | 470R | Resistor |
-| R9 | 1 | 300R | Resistor |
-| SW1 | 1 | SW_RST | Push button switch, generic, two pins |
-| U1 | 1 | TS1117-3.3 | 1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223 |
-| U2 | 1 | ESP-12E | 802.11 b/g/n Wi-Fi Module |
-| U4 | 1 | 74LVC1G125 | Single Buffer Gate Tri-State, Low-Voltage CMOS |
+| C1 | 1 | 10µF | 0805 10µF |
+| C2 | 1 | 47F | 0805 47µF oder 22µF |
+| aC2 | 1 | 100µF | alternativer Footprint in 1206 für größere Kerkos |
+| C3, C5 | 2 | 100nF | 0805 100nF |
+| C4 | 1 | 1000µF | Elko radial 1000µF 6.3V RM3.5 d=8mm l=11.5mm |
+| D1 | 1 | Freilaufdiode | SS14 DO-214 |
+| J1 | 1 | Screw_Terminal_01x05 |  |
+| J2 | 1 | Conn_01x04_Male | Buchsenleiste RM2.54mm |
+| JP1 | 1 | BTN/FLASH | Jumper mit Pinheader RM2.54 |
+| JP2 | 1 | Jumper_2_Open | Lötbrücke auf der Rückseite für R6 |
+| Q1 | 1 | IRLML6344 | MOSFET N-Kanal 30 V 5A SOT-23 |
+| Q2 | 1 | IRF7410 | MOSFET P-Kanal -12 V -16A SO-8 |
+| R1, R2, R3, R4, R5, R7, R8 | 7 | 10k | 0805 10kΩ |
+| R6 | 1 | 470R | 0805 470Ω |
+| R9 | 1 | 300R | 0805 300Ω |
+| SW1 | 1 | SW_RST | 6mm x3.5mm Push Button SMD|
+| U1 | 1 | TS1117-3.3 | Linearregler 3.3V fix alt. AMS1117-3.3, SOT-223 |
+| U2 | 1 | ESP-12F | ESP-12F (ESP8266) Wifi-Modul |
+| U4 | 1 | 74LVC1G125 | Single Buffer Gate Tri-State als Logic Level Converter, SOT-23-5 |
 
 
 Diese Platine kann mit einem [fertigen Binary](https://install.wled.me/) verwendet werden.
@@ -112,10 +112,10 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand, this works as a
  - 1.2 change gate resisitr value to 300Ohm
  - 1.3 board layout revised  
  THT MOSFET removed and for that...  
- Conductor widened and divided into two layers  
- second C2 capacitor  
+ Traces widened and divided onto two layers  
+ second alternative C2 capacitor  
  Solder jumper placed under R6 for bridging  
- second GND connection on the terminal  
+ second GND connector on the terminal  
  
 
 ![PCB top](img/PCB-top.jpg)
@@ -133,27 +133,27 @@ The data signal is connected to GPIO2 and the MOSFET is switched via GPIO12.
 
 ### Parts list
 
-| Refs | Qty | Component | Description |
+| Refs | qty | components | Description |
 | ----- | --- | ---- | ----------- |
-| C1 | 1 | 10µF | Unpolarized capacitor |
-| C2 | 1 | 47F | Unpolarized capacitor |
-| aC2 | 1 | 100µF | Unpolarized capacitor |
-| C3, C5 | 2 | 100nF | Unpolarized capacitor |
-| C4 | 1 | 1000µF | Unpolarized capacitor |
-| D1 | 1 | Flyback diode | Diode |
-| J1 | 1 | Screw_Terminal_01x05 | Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/) |
-| J2 | 1 | Conn_01x04_Male | Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/) |
-| JP1 | 1 | BTN/FLASH |  |
-| JP2 | 1 | Jumper_2_Open | Jumper, 2-pole, open |
-| Q1 | 1 | IRLML6344 | 3.9A Id, 20V Vds, N-Channel MOSFET, SOT-23 |
-| Q2 | 1 | IRF7410 | -6.7A Id, -20V Vds, P-Channel HEXFET Power MOSFET, SO-8 |
-| R1, R2, R3, R4, R5, R7, R8 | 7 | 10k | Resistor |
-| R6 | 1 | 470R | Resistor |
-| R9 | 1 | 300R | Resistor |
-| SW1 | 1 | SW_RST | Push button switch, generic, two pins |
-| U1 | 1 | TS1117-3.3 | 1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223 |
-| U2 | 1 | ESP-12E | 802.11 b/g/n Wi-Fi Module |
-| U4 | 1 | 74LVC1G125 | Single Buffer Gate Tri-State, Low-Voltage CMOS |
+| C1 | 1 | 10µF | 0805 10µF |
+| C2 | 1 | 47F | 0805 47µF or 22µF |
+| aC2 | 1 | 100µF | alternative footprint in 1206 for larger caps |
+| C3, C5 | 2 | 100nF | 0805 100nF |
+| C4 | 1 | 1000µF | Capacitor radial 1000µF 6.3V pich3.5 d=8mm l=11.5mm |
+| D1 | 1 | Free wheeling diode | SS14 DO-214 |
+| J1 | 1 | Screw_Terminal_01x05 | |
+| J2 | 1 | Conn_01x04_Male | Socket strip pitch 2.54mm |
+| JP1 | 1 | BTN/FLASH | Jumper with pin header pitch 2.54 |
+| JP2 | 1 | Jumper_2_Open | Solder bridge on the back for R6 |
+| Q1 | 1 | IRLML6344 | MOSFET N-channel 30V 5A SOT-23 |
+| Q2 | 1 | IRF7410 | MOSFET P-channel -12V -16A SO-8 |
+| R1, R2, R3, R4, R5, R7, R8 | 7 | 10k | 0805 10kΩ |
+| R6 | 1 | 470R | 0805 470Ω |
+| R9 | 1 | 300R | 0805 300Ω |
+| SW1 | 1 | SW_RST | 6mm x3.5mm Push Button SMD|
+| U1 | 1 | TS1117-3.3 | Linear regulator 3.3V fix old. AMS1117-3.3, SOT-223 |
+| U2 | 1 | ESP-12F | ESP-12F (ESP8266) Wifi Module |
+| U4 | 1 | 74LVC1G125 | Single Buffer Gate Tri-State as Logic Level Converter, SOT-23-5 |
 
 
 PCB can be used with a [pre compiled binary](https://install.wled.me/).
