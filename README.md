@@ -141,7 +141,7 @@ The data signal is connected to GPIO2 and the MOSFET is switched via GPIO12.
 | aC2 | 1 | 100µF | alternative footprint in 1206 for larger caps |
 | C3, C5 | 2 | 100nF | 0805 100nF |
 | C4 | 1 | 1000µF | Capacitor radial 1000µF 6.3V pich3.5 d=8mm l=11.5mm |
-| D1 | 1 | Free wheeling diode | SS14 DO-214 |
+| D1 | 1 | Flyback diode | SS14 DO-214 |
 | J1 | 1 | Screw_Terminal_01x05 | |
 | J2 | 1 | Conn_01x04_Male | Socket strip pitch 2.54mm |
 | JP1 | 1 | BTN/FLASH | Jumper with pin header pitch 2.54 |
