@@ -1,8 +1,8 @@
 # ESP-12_WLED-Controller  [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [English Version below](https://github.com/der-pw/ESP-12_WLED-Controller#english)
 
-## ACHTUNG! Bitte die aktuelle Version nicht nachbauen!
-Durch einen hässlichen [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) ist die Platine zwar nutzbar, aber bei einigen Effekten resettet der ESP sich nach unbestimmter Zeit. Ich überarbeite gerade das Design, und gebe es frei, sobald ich eine aktuelle Version zusammengebaut und getestet habe.
+## ACHTUNG! Bitte die Version 1.2 nicht nachbauen!
+Durch einen hässlichen [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) ist die Platine zwar nutzbar, aber bei einigen Effekten resettet der ESP sich nach unbestimmter Zeit. Im master-Zweig befinden sich die aktuellen Daten. 
 
 ----
 
