@@ -79,7 +79,7 @@ Diese Platine kann mit einem [fertigen Binary](https://install.wled.me/) verwend
 
 ## Dankeschön!  
 
-Ein besonderer Dank geht an [Aircookie](https://github.com/Aircoookie) und allen Beteiligten, die am [WLED](https://github.com/Aircoookie/WLED) Projekt mitarbeiten.
+Ein besonderer Dank geht an [Aircoookie](https://github.com/Aircoookie) und allen Beteiligten, die am [WLED](https://github.com/Aircoookie/WLED) Projekt mitarbeiten.
 
 
 ----
@@ -161,4 +161,4 @@ PCB can be used with a [pre compiled binary](https://install.wled.me/).
 
 ## Thanks!  
 
-Special thanks to [Aircookie](https://github.com/Aircoookie) and all the contributors at the [WLED](https://github.com/Aircoookie/WLED) project.
+Special thanks to [Aircoookie](https://github.com/Aircoookie) and all the contributors at the [WLED](https://github.com/Aircoookie/WLED) project.
