@@ -3502,6 +3502,7 @@
   (gr_line (start 130.9 117.16) (end 156.43 117.14) (layer "F.SilkS") (width 0.2) (tstamp 759788bd-3cb9-4d38-b58c-5cb10b7dca6b))
   (gr_circle (center 134.88 100.12) (end 135.03 100.12) (layer "F.SilkS") (width 0.3) (fill none) (tstamp b64f97d8-1d4d-4e9c-a659-9fcf687a84f1))
   (gr_line (start 156.43 114.1) (end 156.43 117.14) (layer "F.SilkS") (width 0.2) (tstamp bb59b92a-e4d0-4b9e-82cd-26304f5c15b8))
+  (gr_circle (center 134.88 96.15) (end 135.03 96.15) (layer "F.SilkS") (width 0.3) (fill none) (tstamp c546008e-7661-419e-94b3-0bbb9fd14ec8))
   (gr_line (start 130.9 117.16) (end 130.9 114.12) (layer "F.SilkS") (width 0.2) (tstamp f44d04c5-0d17-4d52-8328-ef3b4fdfba5f))
   (gr_line (start 130.9 114.12) (end 156.43 114.1) (layer "F.SilkS") (width 0.2) (tstamp f6983918-fe05-46ea-b355-bc522ec53440))
   (gr_line (start 177.94 115.83) (end 177.94 89.96) (layer "Edge.Cuts") (width 0.05) (tstamp 00000000-0000-0000-0000-000060cb1b4f))
