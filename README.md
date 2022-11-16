@@ -1,4 +1,7 @@
 # ESP-12_WLED-Controller V1.3 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S7GF5NA)
+
 [English Version below](https://github.com/der-pw/ESP-12_WLED-Controller#english)
 
 Durch einen hässlichen [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) ist der Controller bis V1.2 zwar nutzbar, aber bei einigen Effekten resettet der ESP sich nach unbestimmter Zeit. Ich habe die Platine inzwischen überarbeitet, als V1.3 veröffentlicht und somit auch gleich den standard **GPIO02** für den Datenausgang verwendet.
@@ -81,7 +84,6 @@ Diese Platine kann mit einem [fertigen Binary](https://install.wled.me/) verwend
 
 Ein besonderer Dank geht an [Aircoookie](https://github.com/Aircoookie) und allen Beteiligten, die am [WLED](https://github.com/Aircoookie/WLED) Projekt mitarbeiten.
 
-
 ----
 ## English
 
@@ -161,4 +163,4 @@ PCB can be used with a [pre compiled binary](https://install.wled.me/).
 
 ## Thanks!  
 
-Special thanks to [Aircoookie](https://github.com/Aircoookie) and all the contributors at the [WLED](https://github.com/Aircoookie/WLED) project.
+Special thanks to [Aircoookie](https://github.com/Aircoookie) and all the contributors at the [WLED](https://github.com/Aircoookie/WLED) project.  
