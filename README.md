@@ -4,13 +4,15 @@
 
 [English Version below](https://github.com/der-pw/ESP-12_WLED-Controller#english)
 
-Durch einen hässlichen [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) ist der Controller bis V1.2 zwar nutzbar, aber bei einigen Effekten resettet der ESP sich nach unbestimmter Zeit. Ich habe die Platine inzwischen überarbeitet, als V1.3 veröffentlicht und somit auch gleich den standard **GPIO02** für den Datenausgang verwendet.
-
-----
+---
 
 Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Controller speziell für [WLED](https://github.com/Aircoookie/WLED) oder auch Alternativen.
 
-Übersicht:
+### TLDR
+Ich habe einige Tests zur Stromaufnahme am ESP-32_WLED-Controller durchgeführt.  
+Let's talk about [maximum ratings](https://github.com/der-pw/ESP-32_WLED-Controller/blob/main/maximum_ratings.md)
+
+### Übersicht:
  - [Versionen](https://github.com/der-pw/ESP-12_WLED-Controller#versionen)
  - [Gehäuse](https://github.com/der-pw/ESP-12_WLED-Controller#gehäuse) 
  - [Einstellungen](https://github.com/der-pw/ESP-12_WLED-Controller#einstellungen)
@@ -35,7 +37,7 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
  zweiter C2 Kondensator  
  Lötjumper unter R6 zum Überbrücken gesetzt  
  zweiter GND Anschluss am Terminal  
- Datenpin von IO4 auf IO2 gelegt.
+ Datenpin von IO4 auf IO2 gelegt [Fehler im Design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433).
 
 ![PCB top](img/PCB-top.jpg)
 
@@ -87,7 +89,9 @@ Ein besonderer Dank geht an [Aircoookie](https://github.com/Aircoookie) und alle
 ----
 ## English
 
-Due to an ugly [error in the design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433) the board can be used up to V1.2, but at some effects the ESP resets after an indefinite period of time. In the meantime I have revised the board, published it as V1.3 and therefore also used the standard **GPIO02** for the data output.
+### TLDR
+I did some power consumption tests on the ESP-32_WLED controller.  
+Let's talk about [maximum ratings](https://github.com/der-pw/ESP-32_WLED-Controller/blob/main/maximum_ratings.md)
 
 ----
 
@@ -118,7 +122,8 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand, this works as a
  Traces widened and divided onto two layers  
  second alternative C2 capacitor  
  Solder jumper placed under R6 for bridging  
- second GND connector on the terminal  
+ second GND connector on the terminal.  
+ Data pin placed from IO4 to IO2 [Error in design](https://github.com/der-pw/ESP-12_WLED-Controller/issues/2#issuecomment-1024920433). 
  
 
 ![PCB top](img/PCB-top.jpg)
