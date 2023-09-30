@@ -9,7 +9,7 @@
 Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Controller speziell für [WLED](https://github.com/Aircoookie/WLED) oder auch Alternativen.
 
 ### TLDR
-Ich habe einige Tests zur Stromaufnahme am ESP-32_WLED-Controller durchgeführt.  
+Ich habe einige Tests zur Stromaufnahme am ESP-32_WLED-Controller durchgeführt. Da beide Controller im Bereich der MOSFET gleich aufgebaut sind, lassen sich die Erkenntnisse übertragen.  
 Let's talk about [maximum ratings](https://github.com/der-pw/ESP-32_WLED-Controller/blob/main/maximum_ratings.md)
 
 ### Übersicht:
@@ -28,10 +28,10 @@ Vor dem P-MOSFET sitzt ein weiterer N-MOSFET. Einmal funktioniert dieser als Tre
 ### Versionen:
  - 0.9 erstes Layout veröffentlicht
  - 1.0 kleine Änderungen und Fehler beseitigt
- - 1.01 C1 und C2 Korrektur der Werte (statt 10nF 10µF) hat keine Auswirkung auf die Platine
- - 1.1 Gatewiderstand R9 hinzugefügt
- - 1.2 Gatewiderstand Wert auf 300Ohm geändert
- - 1.3 Platinenlayout überarbeitet  
+ - - 1.01 C1 und C2 Korrektur der Werte (statt 10nF 10µF) hat keine Auswirkung auf die Platine
+ - - 1.1 Gatewiderstand R9 hinzugefügt
+ - - 1.2 Gatewiderstand Wert auf 300Ohm geändert
+ - - 1.3 Platinenlayout überarbeitet  
  THT-MOSFET entfernt und dafür ...    
  Leiterbahn verbreitert und auf zwei Lagen verteilt  
  zweiter C2 Kondensator  
@@ -90,7 +90,7 @@ Ein besonderer Dank geht an [Aircoookie](https://github.com/Aircoookie) und alle
 ## English
 
 ### TLDR
-I did some power consumption tests on the ESP-32_WLED controller.  
+I did some power consumption tests on the ESP-32_WLED controller. Both controllers have the same structure in the MOSFET area, the results can be transferred.  
 Let's talk about [maximum ratings](https://github.com/der-pw/ESP-32_WLED-Controller/blob/main/maximum_ratings.md)
 
 ----
@@ -114,10 +114,10 @@ Another N-MOSFET sits in front of the P-MOSFET. On the one hand, this works as a
 ### Versions:
  - 0.9 first layout published
  - 1.0 minor changes and bugs fixed
- - 1.01 C1 and C2 wrong Values fixed (10µF instead of 10nF) has no effects of the PCB
- - 1.1 added gate resistor R9
- - 1.2 change gate resisitr value to 300Ohm
- - 1.3 board layout revised  
+ - - 1.01 C1 and C2 wrong Values fixed (10µF instead of 10nF) has no effects of the PCB
+ - - 1.1 added gate resistor R9
+ - - 1.2 change gate resisitr value to 300Ohm
+ - - 1.3 board layout revised  
  THT MOSFET removed and for that...  
  Traces widened and divided onto two layers  
  second alternative C2 capacitor  
