@@ -8,7 +8,6 @@
 
 Designidee eines EPS-12(E/F) basierten NeoPixel (WS2812B, WS2811, SK6812)-Controller speziell für [WLED](https://github.com/Aircoookie/WLED) oder auch Alternativen.
 
-### TLDR
 Ich habe einige Tests zur Stromaufnahme am ESP-32_WLED-Controller durchgeführt. Da beide Controller im Bereich des MOSFET gleich aufgebaut sind, lassen sich die Erkenntnisse übertragen.  
 Let's talk about [maximum ratings](https://github.com/der-pw/ESP-32_WLED-Controller/blob/main/maximum_ratings.md)
 
